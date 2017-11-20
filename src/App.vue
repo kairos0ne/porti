@@ -1,32 +1,20 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
-      persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      v-model="drawer"
-      enable-resize-watcher
-      app
-    >
-     
+    <v-navigation-drawer persistent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher app>
       <ul>
-        <li class="menu-link">Test</li><hr>
-        <li class="menu-link">Test</li><hr>
-        <li class="menu-link">Test</li><hr>
-        <li class="menu-link">Test</li><hr>
-        <li class="menu-link">Test</li><hr>
-      </ul>
+        <router-link to="/"><li class="menu-link">Foundation</li><hr></router-link>
+        
+          <router-link to="/process"><li class="menu-link">Process</li><hr></router-link>
           
+        
+          <li class="menu-link">Work</li><hr>
+          <router-link to="/about"><li class="menu-link">About</li><hr></router-link>
+
+        <router-link to="/cv"><li class="menu-link">Curriculum Vitae</li><hr></router-link>
+      </ul>
     </v-navigation-drawer>
     <v-toolbar fixed app :clipped-left="clipped">
       <v-toolbar-side-icon @click.stop="drawer = !drawer" light></v-toolbar-side-icon>
-      <v-btn
-        icon
-        light
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
       <img src="/static/base_logo.svg" alt="">
       <v-spacer></v-spacer>
     </v-toolbar>

@@ -2,69 +2,35 @@
   <div class="container">
     <div class="container">
         <div id="what" class="page-header col-lg-12 col-md-12 col-sm-12 ">
-            <h3>Foundation <small> by process. </small></h3>
-            <p>Foundation is the key to any good website or application build. .</p>
+            <h3>Scott Davies <small> Senior Technical Project Manager </small></h3>
         </div>
-        <p class="col-lg-4 col-md-4 col-sm-4"> <img id="foundation" src="static/foundation.png" alt="foundation"></p>
-        <p>There are three main areas of concern on any technical build; strategic planning, functional goals and aesthetics. Within these areas there are base level requirements, and in many cases depend on each other. The traditional approach is to: agree objectives, determine the requirements, assess the data, provide a frame of reference (wireframes), design core-templates, develop a staged environment, test and push to live.</p>
-        <p>This is a base level example of a project laid out in a waterfall methodology. It has its advantages and disadvantages. With this type of thinking/ model, we run the risk of giving too much effort where it is not needed. Deliverable's can sit with other departments for some time before they hit studio, leaving an ever increasing pressure on development teams picking at the latter end of the project.</p>
-    </div>
-    
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <v-card class="cards">
-        <v-card-media src="/static/process-management.jpg" height="200px">
-        </v-card-media>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Process</h3>
-            <div>Establish effective milestones</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="grey">View</v-btn>
-        </v-card-actions>
-      </v-card>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <v-card class="cards">
-        <v-card-media src="/static/wireframe.jpeg" height="200px">
-        </v-card-media>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Solution Design</h3>
-            <div>Solve the problem, then write the code</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="grey">View</v-btn>
-        </v-card-actions>
-      </v-card>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-     <v-card class="cards">
-        <v-card-media src="/static/doc-images/cards/desert.jpg" height="200px">
-        </v-card-media>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Execution</h3>
-            <div>Content goes here</div>
-          </div>
-        </v-card-title>
-        <v-card-actions>
-          <v-btn flat color="grey">View</v-btn>
-        </v-card-actions>
-      </v-card>
+        <img class="col-lg-3 col-md-3 col-sm-3 col-xs-6" id="foundation" src="static/scott_photo.jpg" alt="foundation"></img>
+        <p>I have a keen interest in brand psychology and take a strategic approach to problem solving. I have experience working on major global accounts such as P&G, Daimler, Virgin and RBS.
+          Having worked the majority of my career in Digital communications management, I have honed and fine tuned my knowledge of UX best practice. I have experience working with the agile and waterfall methodologies across small to medium builds. I have also worked with various industry standard project management tools, building a technical understanding of the following languages and platforms.</p>
+        <ul>
+          <li><strong>Tools:</strong> Jira, Basecamp, Office, SmartSheets, Omnigraffle, MS Project/ Omniplan </li>
+          <li><strong>Frameworks:</strong> Laravel, Vue, Angular, Rails </li>
+       </ul>
+       <v-btn color="primary">Curriculum Vitae</v-btn>
+       <div id="core" class="col-lg-12 col=md-12 col-sm-12 col-xs-12">
+        <ul>
+          <li><strong>Core competencies:</strong></li><br>
+          <li>- Writing of proposals and pitch documentation</li><br>
+          <li>- Writing of scope of works documentation</li><br>
+          <li>- Writing technical and functional specification</li><br>
+          <li>- Day-to-day documentation of projects from initial brief to production</li><br>
+          <li>- Briefing creative teams on campaign/ platform objectives in a clear concise manner</li>
+        </ul>
+       </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'About',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
@@ -92,5 +58,15 @@ a {
 
 test  {
   width: 100%;
+}
+
+.icon {
+  width: 50px;
+}
+.CV {
+  padding-top: 25px;
+}
+#core {
+  padding-top: 20px;
 }
 </style>

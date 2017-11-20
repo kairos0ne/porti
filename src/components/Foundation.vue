@@ -3,11 +3,11 @@
     <div class="container">
         <div id="what" class="page-header col-lg-12 col-md-12 col-sm-12 ">
             <h3>Foundation <small> by process. </small></h3>
-            <p>Foundation is the key to any good website or application build. .</p>
+            <p>Foundation is the key to any good website or application build.</p>
         </div>
-        <p class="col-lg-4 col-md-4 col-sm-4"> <img id="foundation" src="static/foundation.png" alt="foundation"></p>
+        <img class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="foundation" src="static/foundation.png" alt="foundation">
         <p>There are three main areas of concern on any technical build; strategic planning, functional goals and aesthetics. Within these areas there are base level requirements, and in many cases depend on each other. The traditional approach is to: agree objectives, determine the requirements, assess the data, provide a frame of reference (wireframes), design core-templates, develop a staged environment, test and push to live.</p>
-        <p>This is a base level example of a project laid out in a waterfall methodology. It has its advantages and disadvantages. With this type of thinking/ model, we run the risk of giving too much effort where it is not needed. Deliverable's can sit with other departments for some time before they hit studio, leaving an ever increasing pressure on development teams picking at the latter end of the project.</p>
+        <p>This is a base level example of a project laid out in a waterfall methodology. It has its advantages and disadvantages. With this type of thinking/ model, we run the risk of giving too much effort where it is not needed. Deliverable's can sit with other departments for some time before they hit studio, leaving an ever increasing pressure on development teams towards the latter end of the project.</p>
     </div>
     
     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -21,7 +21,7 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="grey">View</v-btn>
+         <router-link to="/process"> <v-btn flat color="grey">View</v-btn></router-link>
         </v-card-actions>
       </v-card>
     </div>
@@ -62,7 +62,7 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Foundation',
   data () {
     return {
     }
