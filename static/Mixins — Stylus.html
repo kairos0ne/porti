@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://stylus-lang.com/docs/mixins.html -->
+<html class=" page js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./Mixins — Stylus_files/style.css">
+    <!--[if lt IE 9]><script src="//stylus-lang.com/js/vendor/selectivizr-1.0.2.min.js"></script><![endif]-->
+    <script type="text/javascript" async="" src="./Mixins — Stylus_files/watch.js"></script><script async="" src="./Mixins — Stylus_files/analytics.js"></script><script src="./Mixins — Stylus_files/modernizr-2.8.2.min.js"></script>
+    <script src="./Mixins — Stylus_files/respond.js-1.4.2.min.js"></script>
+
+    
+
+    <title>Mixins — Stylus</title>
+</head>
+<body>
+    <!--[if lt IE 9]>
+      <div class="browsehappy">
+        <p>
+          You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.
+        </p>
+      </div>
+    <![endif]-->
+    <div class="wrap">
+        <aside class="sidebar">
+            <nav>
+                <a href="http://stylus-lang.com/try.html">
+                    Try Stylus Online!
+                </a>
+
+                
+                <a href="http://stylus-lang.com/docs/selectors.html">
+                    Selectors
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/variables.html">
+                    Variables
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/interpolation.html">
+                    Interpolation
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/operators.html">
+                    Operators
+                </a>
+                                
+                <strong>
+                    Mixins
+                </strong>
+                                
+                <a href="http://stylus-lang.com/docs/functions.html">
+                    Functions
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/kwargs.html">
+                    Keyword Arguments
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/bifs.html">
+                    Built-in Functions
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/vargs.html">
+                    Rest Params
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/comments.html">
+                    Comments
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/conditionals.html">
+                    Conditionals
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/hashes.html">
+                    Hashes
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/iteration.html">
+                    Iteration
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/import.html">
+                    @import and @require
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/media.html">
+                    @media
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/font-face.html">
+                    @font-face
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/keyframes.html">
+                    @keyframes
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/atrules.html">
+                    Other @-rules
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/extend.html">
+                    @extend
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/block.html">
+                    @block
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/functions.url.html">
+                    url()
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/literal.html">
+                    CSS Literal
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/css-style.html">
+                    CSS Style Syntax
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/escape.html">
+                    Char Escaping
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/executable.html">
+                    Executable
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/error-reporting.html">
+                    Error Reporting
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/middleware.html">
+                    Connect Middleware
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/introspection.html">
+                    Introspection API
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/js.html">
+                    JavaScript API
+                </a>
+                                
+                <a href="http://stylus-lang.com/docs/sourcemaps.html">
+                    Sourcemaps
+                </a>
+                                
+                <a href="http://tj.github.io/nib/">CSS3 Extensions with Nib</a>
+            </nav>
+
+            <p>Created by <a href="http://github.com/tj">TJ Holowaychuk</a>, originated at:</p>
+            <a href="https://learnboost.com/">
+                <img class="credit" src="./Mixins — Stylus_files/learnboost.png" alt="LearnBoost" title="Creators of Stylus">
+            </a>
+
+            <p>Supported by:</p>
+            <a href="http://automattic.com/">
+                <img class="credit" src="./Mixins — Stylus_files/automattic.svg" alt="Automattic" title="Supporting organization">
+            </a>
+            <a href="http://launchboxhq.com/">
+                <img class="credit" src="./Mixins — Stylus_files/launchbox.svg" alt="LaunchBox" title="Web-design and hosting">
+            </a>
+            <a href="https://mojotech.com/">
+                <img class="credit" src="./Mixins — Stylus_files/mojotech.png" alt="MojoTech" title="Design">
+            </a>
+
+        </aside>
+
+        <main class="content">
+            <header class="logo">
+                <a href="http://stylus-lang.com/"><img src="./Mixins — Stylus_files/stylus-logo.svg" alt="Stylus"></a>
+            </header>
+
+            <div class="docs">
+                <h1>Mixins</h1>
+                
+
+<p>Both mixins and functions are defined in the same manner, but they are applied in different ways.</p>
+
+<p>For example, we have a <code class="highlighter-rouge">border-radius(n)</code> function defined below, which is invoked as a <em>mixin</em> (i.e., invoked as a statement, rather than part of an expression).</p>
+
+<p>When <code class="highlighter-rouge">border-radius()</code> is invoked within a selector, the properties are expanded and copied into the selector.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+form input[type=button]
+  border-radius(5px)
+</code></pre>
+</div>
+
+<p>Compiles to:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>form input[type=button] {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+</code></pre>
+</div>
+
+<p>When using mixins you can omit the parentheses altogether, providing fantastic transparent vendor property support!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+form input[type=button]
+  border-radius 5px
+</code></pre>
+</div>
+
+<p>Note that the <code class="highlighter-rouge">border-radius</code> within our mixin is treated as a property, and not a recursive function invocation.</p>
+
+<p>To take this further, we can utilize the automatic <code class="highlighter-rouge">arguments</code> local variable, containing the expression passed, allowing multiple values to be passed:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+</code></pre>
+</div>
+
+<p>Now we can pass values like <code class="highlighter-rouge">border-radius 1px 2px / 3px 4px</code>!</p>
+
+<p>Another great use of this is the addition of transparent support for vendor-specifics—such as <code class="highlighter-rouge">opacity</code> support for IE:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    support-for-ie ?= true
+
+    opacity(n)
+      opacity n
+      if support-for-ie
+        filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+    #logo
+      &amp;:hover
+        opacity 0.5
+</code></pre>
+</div>
+
+<p>Rendering:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    #logo:hover {
+      opacity: 0.5;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    }
+</code></pre>
+</div>
+
+<h2 id="parent-references"><a class="permalink" title="Link to this place" href="http://stylus-lang.com/docs/mixins.html#parent-references"></a>Parent References</h2>
+
+<p>Mixins may utilize the parent reference character <code class="highlighter-rouge">&amp;</code>, acting on the parent instead of further nesting.</p>
+
+<p>For example, let’s say we want to create a <code class="highlighter-rouge">stripe(even, odd)</code> mixin for striping table rows. We provide both <code class="highlighter-rouge">even</code> and <code class="highlighter-rouge">odd</code> with default color values, and assign the <code class="highlighter-rouge">background-color</code> property on the row. Nested within the <code class="highlighter-rouge">tr</code> we use <code class="highlighter-rouge">&amp;</code> to reference the <code class="highlighter-rouge">tr</code>, providing the <code class="highlighter-rouge">even</code> color.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> stripe(even = #fff, odd = #eee)
+   tr
+     background-color odd
+     &amp;.even
+     &amp;:nth-child(even)
+       background-color even
+</code></pre>
+</div>
+
+<p>We may then utilize the mixin as shown below:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> table
+   stripe()
+   td
+     padding 4px 10px
+
+ table#users
+   stripe(#303030, #494848)
+   td
+     color white
+</code></pre>
+</div>
+
+<p>Alternatively, <code class="highlighter-rouge">stripe()</code> could be defined without parent references:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>stripe(even = #fff, odd = #eee)
+  tr
+    background-color odd
+  tr.even
+  tr:nth-child(even)
+    background-color even
+</code></pre>
+</div>
+
+<p>If we wished, we could invoke <code class="highlighter-rouge">stripe()</code> as if it were a property:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>stripe #fff #000
+</code></pre>
+</div>
+
+<h2 id="block-mixins"><a class="permalink" title="Link to this place" href="http://stylus-lang.com/docs/mixins.html#block-mixins"></a>Block mixins</h2>
+
+<p>You can pass blocks to mixins by calling mixin with <code class="highlighter-rouge">+</code> prefix:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>+foo()
+  width: 10px
+</code></pre>
+</div>
+
+<p>The passed block would be available inside the mixin as <code class="highlighter-rouge">block</code> variable, that then could be used with interpolation:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>foo()
+  .bar
+    {block}
+
++foo()
+  width: 10px
+
+=&gt; .bar {
+     width: 10px;
+   }
+</code></pre>
+</div>
+
+<p>This feature is in its rough state ATM, but would be enhanced in the future.</p>
+
+<h2 id="mixing-mixins-in-mixins"><a class="permalink" title="Link to this place" href="http://stylus-lang.com/docs/mixins.html#mixing-mixins-in-mixins"></a>Mixing Mixins in Mixins</h2>
+
+<p>Mixins can (of course!) utilize other mixins, building upon their own selectors and properties.</p>
+
+<p>For example, below we create <code class="highlighter-rouge">comma-list()</code> to inline (via <code class="highlighter-rouge">inline-list()</code>) and comma-separate an unordered list.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> inline-list()
+   li
+     display inline
+
+ comma-list()
+   inline-list()
+   li
+     &amp;:after
+       content ', '
+     &amp;:last-child:after
+       content ''
+
+ ul
+   comma-list()
+</code></pre>
+</div>
+
+<p>Rendering:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ul li:after {
+  content: ", ";
+}
+ul li:last-child:after {
+  content: "";
+}
+ul li {
+  display: inline;
+}
+</code></pre>
+</div>
+
+
+
+                
+
+            </div>
+
+            <a href="https://github.com/stylus/stylus/" class="meow">
+                <img src="./Mixins — Stylus_files/octocat.svg" alt="Stylus on GitHub">
+            </a>
+        </main>
+    </div>
+
+    <!--[if lt IE 9]>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="//stylus-lang.com/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+      <script src="./Mixins — Stylus_files/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="//stylus-lang.com/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+    <!--<![endif]-->
+    <script src="./Mixins — Stylus_files/plugins.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59751437-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter23802394 = new Ya.Metrika({id:23802394, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/23802394" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript><!-- /Yandex.Metrika counter -->
+
+
+
+</body></html>
