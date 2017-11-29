@@ -11,7 +11,7 @@
           <li><strong>Tools:</strong> Jira, Basecamp, Office, SmartSheets, Omnigraffle, MS Project/ Omniplan </li>
           <li><strong>Frameworks:</strong> Laravel, Vue, Angular, Rails </li>
        </ul>
-       <v-btn color="primary">Curriculum Vitae</v-btn>
+       <router-link to="/cv"><v-btn color="primary">Curriculum Vitae</v-btn></router-link>
        <div id="core" class="col-lg-12 col=md-12 col-sm-12 col-xs-12">
         <ul>
           <li><strong>Core competencies:</strong></li><br>
