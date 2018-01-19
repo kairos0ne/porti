@@ -3,13 +3,9 @@
     <v-navigation-drawer persistent :mini-variant="miniVariant" :clipped="clipped" v-model="drawer" enable-resize-watcher app>
       <ul>
         <router-link to="/"><li class="menu-link">Foundation</li><hr></router-link>
-        
-          <router-link to="/process"><li class="menu-link">Process</li><hr></router-link>
-          
-        
-          <li class="menu-link">Work</li><hr>
-          <router-link to="/about"><li class="menu-link">About</li><hr></router-link>
-
+        <router-link to="/process"><li class="menu-link">Process</li><hr></router-link>
+        <router-link to="/work"><li class="menu-link">Work</li><hr></router-link>
+        <router-link to="/about"><li class="menu-link">About</li><hr></router-link>
         <router-link to="/cv"><li class="menu-link">Curriculum Vitae</li><hr></router-link>
       </ul>
     </v-navigation-drawer>
