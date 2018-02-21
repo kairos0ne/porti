@@ -4,6 +4,7 @@ import Foundation from '@/components/Foundation'
 import About from '@/components/About'
 import CV from '@/components/CV'
 import Process from '@/components/Process'
+import Work from '@/components/Work'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/cv',
       name: 'CV',
       component: CV
+    },
+    {
+      path: '/work',
+      name: 'Work',
+      component: Work
     }
   ]
 })

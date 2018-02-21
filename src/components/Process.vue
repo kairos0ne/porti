@@ -4,7 +4,7 @@
             <div id="what" class="page-header col-lg-12 col-md-12 col-sm-12 ">
                 <h3>Process <small> Art is a process not an outcome </small></h3>
             </div>
-            <img class="main-img col-lg-3 col-md-3 col-sm-4 col-xs-6" id="foundation" src="static/process_icon.png" alt="foundation"></img>
+            <img class="main-img col-lg-3 col-md-3 col-sm-4 col-xs-6" id="foundation" src="static/process_icon.png" alt="foundation">
             
             <p>Process can be defined in this case with the three D's. </p>
             <p><strong>Discover:</strong> Initial planning phase to refine scope and goals through workshops </p>
