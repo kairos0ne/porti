@@ -2,7 +2,7 @@
     <div class="container">
         <div id="what" class="page-header col-lg-12 col-md-12 col-sm-12 ">
             <h4>Senior Project Manager - Monochrome <small> November 2016 - Present </small></h4>
-            <p>I joined Monochrome on contract to support the PCMS client as an agile project manager. My role is to manage the development of the Buddy Buy web application. My remit is to manage the API and Client builds on Rails and Angular 2 respectively. I also support the Premier Foods account in a client service capacity, managing site builds on the Kentico ASP.NET framework.</p>
+            <p>I joined Monochrome on contract to support the PCMS client as an agile project manager. My role is to manage the development of the Buddy Buy web application. My remit is to manage the API and Client builds on Rails and Angular respectively. I also support the Premier Foods account in a client service capacity, managing site builds on the Kentico ASP.NET framework.</p>
             <p><strong>Key Accounts</strong></p>
             <ul>
               <li>PCMS - Buddy Buy </li><br>
