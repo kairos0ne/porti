@@ -2,7 +2,7 @@ FROM nginx:1.13-alpine as production-stage
 
 # Move built files to the right location
 
-COPY dist /var/www
+COPY ./dist /var/www
 
 
 # Get supervisor
