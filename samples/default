@@ -6,7 +6,7 @@ server {
   include /etc/nginx/letsencrypt.conf;
 
   location / {
-    return 301 https://test123.eu.ngrok.io$request_uri;
+    return 301 https://kairos0ne.com$request_uri;
   }
 }
 
@@ -53,7 +53,7 @@ server {
   location /api {
     # Docker
     resolver 127.0.0.11 valid=5s;
-    set $backend_addr "http://api:3000";
+    set $backend_addr "http://localhost:3000";
 
     # nginx handles variable addresses differently to static...
     # it will crach if it cant resolve a staticly defined backend address!!
@@ -68,7 +68,7 @@ server {
   # the rest goes to frontt end app
   location / {
     resolver 127.0.0.11 valid=5s;
-    set $backend_addr "http://gui:8080";
+    set $backend_addr "http://localhost:8080";
     proxy_pass $backend_addr;
 
     proxy_set_header Host $host;
