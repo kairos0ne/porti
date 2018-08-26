@@ -12,7 +12,6 @@ services:
       - '4433:4433'
     volumes:
       - ./samples/default:/etc/nginx/sites-available/default
-      - ./samples/deafault.conf:/etc/nginx/nginx.conf
 
 networks:
   nginx:
