@@ -2,19 +2,13 @@ version: '3'
 
 services:
   
-  nginx:
-    build:
-      .
+  gui:
+    image: kairos0ne/porti
     networks:
       - nginx
-    ports:
-      - '8080:8080'
-      - '4433:4433'
-    volumes:
-      - ./samples/cli.ini:/etc/letsencrypt/cli.ini
-      - ./samples/default.conf:/etc/nginx/sites-available/default
-      - ./samples/dh_params.pem:/etc/ssl/dh/dh_params.pem
-      - ./samples/index.html:/var/www/index.html
+      - db
+    ports: 
+      - "8080:80"
 
 networks:
   nginx:
